@@ -1,0 +1,1 @@
+Technology vectors from react-icons 5.7.0. Simple Icons (CC0-1.0), Font Awesome Free (CC BY 4.0), Tabler Icons (MIT), and Microsoft VS Code Codicons (CC BY 4.0). See LICENSE.txt for upstream attribution. SQL and REST API are standards rather than brands; their icons use Tabler SQL and API symbols.

@@ -1,0 +1,536 @@
+/* =========================================
+   EXPERIENCE COLOR SYSTEM
+   ========================================= */
+
+#experience {
+  --experience-accent: #c44a13;
+  --experience-purple: #9b6dff;
+  --experience-blue: #329cff;
+  --experience-green: #75c900;
+  --experience-pink: #e54cd8;
+
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+
+/* =========================================
+   BACKGROUND SKETCHES
+   ========================================= */
+
+#experience .experience-sketch-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#experience .experience-doodle {
+  position: absolute;
+  width: 130px;
+  height: 110px;
+  opacity: 0.55;
+}
+
+#experience .experience-doodle-one {
+  top: 7%;
+  right: 7%;
+  width: 170px;
+  transform: rotate(-15deg);
+}
+
+#experience .experience-doodle-two {
+  top: 27%;
+  left: 4%;
+  width: 90px;
+  transform: rotate(25deg);
+}
+
+#experience .experience-doodle-three {
+  top: 49%;
+  right: 5%;
+  width: 180px;
+}
+
+#experience .experience-doodle-four {
+  top: 72%;
+  left: 6%;
+  width: 90px;
+}
+
+#experience .experience-doodle-five {
+  bottom: 7%;
+  right: 9%;
+  width: 150px;
+}
+
+/* =========================================
+   FLOATING CIRCLES
+   ========================================= */
+
+#experience .experience-floating-circle {
+  position: absolute;
+  display: block;
+  border: 2px solid;
+  border-radius: 48% 52% 55% 45%;
+  opacity: 0.45;
+  animation: experience-float 8s ease-in-out infinite;
+}
+
+#experience .circle-one {
+  top: 14%;
+  left: 8%;
+  width: 34px;
+  height: 32px;
+  border-color: var(--experience-purple);
+}
+
+#experience .circle-two {
+  top: 36%;
+  right: 10%;
+  width: 48px;
+  height: 45px;
+  border-color: var(--experience-blue);
+  animation-delay: -2s;
+}
+
+#experience .circle-three {
+  top: 65%;
+  left: 12%;
+  width: 26px;
+  height: 28px;
+  border-color: var(--experience-pink);
+  animation-delay: -4s;
+}
+
+#experience .circle-four {
+  bottom: 9%;
+  right: 15%;
+  width: 38px;
+  height: 35px;
+  border-color: var(--experience-green);
+  animation-delay: -1s;
+}
+
+/* =========================================
+   FLOATING CROSSES AND STARS
+   ========================================= */
+
+#experience .experience-floating-cross {
+  position: absolute;
+  font-size: 26px;
+  font-weight: 300;
+  opacity: 0.55;
+  animation: experience-cross-float 9s ease-in-out infinite;
+}
+
+#experience .cross-one {
+  top: 21%;
+  right: 18%;
+  color: var(--experience-purple);
+}
+
+#experience .cross-two {
+  bottom: 25%;
+  left: 7%;
+  color: var(--experience-blue);
+  animation-delay: -3s;
+}
+
+#experience .experience-sketch-star {
+  position: absolute;
+  font-size: 32px;
+  opacity: 0.35;
+  animation: experience-star-spin 18s linear infinite;
+}
+
+#experience .star-one {
+  top: 42%;
+  left: 5%;
+  color: var(--experience-pink);
+}
+
+#experience .star-two {
+  bottom: 15%;
+  right: 6%;
+  color: var(--experience-green);
+  animation-direction: reverse;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+#experience .experience-header {
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+}
+#experience .experience-editorial-title {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: clamp(2rem, 8.4vw, 7.25rem);
+  line-height: 0.96;
+  font-weight: 850;
+  letter-spacing: -0.065em;
+  color: #292929;
+}
+#experience .experience-heading-text { display: block; }
+#experience .experience-subtitle {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: clamp(22px, 2.5vw, 32px) 0 0;
+  color: #292929;
+  font-size: clamp(1.15rem, 2.1vw, 1.75rem);
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+#experience .experience-header-underline {
+  position: absolute;
+  left: 0;
+  bottom: -13px;
+  width: 100%;
+  height: 18px;
+  color: var(--experience-accent);
+  pointer-events: none;
+}
+#experience .experience-header-description {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: clamp(30px, 3vw, 40px) 0 0;
+  color: #77716c;
+  font-size: clamp(1.15rem, 2.15vw, 1.85rem);
+  line-height: 1.65;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+#experience .experience-description-line { display: block; }
+#experience .experience-header-description strong { color: #292929; font-weight: 550; }
+#experience .experience-description-emphasis { position: relative; display: inline-block; color: #292929; }
+#experience .experience-description-emphasis .experience-header-underline { bottom: -8px; height: 13px; }
+#experience .experience-header-sketches {
+  position: absolute;
+  z-index: 0;
+  top: 5px;
+  right: 36px;
+  width: 230px;
+  height: 210px;
+  pointer-events: none;
+}
+#experience .experience-header-drawing { position: absolute; color: var(--experience-accent); }
+#experience .experience-header-curve { top: 30px; left: 0; width: 120px; height: 70px; }
+#experience .experience-header-spark { top: 6px; right: 8px; width: 36px; height: 40px; }
+#experience .experience-header-circle { top: 124px; left: 80px; width: 34px; height: 34px; }
+#experience .experience-header-pencil { right: 0; bottom: 24px; width: 65px; height: 28px; color: var(--theme-muted); }
+#experience .experience-header-wave { bottom: 0; left: 0; width: 128px; height: 36px; }
+@media (max-width: 1100px) {
+  #experience .experience-header-sketches { width: 140px; height: 155px; right: 24px; }
+  #experience .experience-header-curve { width: 90px; height: 53px; top: 28px; }
+  #experience .experience-header-circle { width: 24px; height: 24px; top: 98px; left: 20px; }
+  #experience .experience-header-pencil { bottom: 10px; width: 45px; height: 20px; }
+  #experience .experience-header-wave { width: 82px; height: 24px; }
+}
+@media (max-width: 767px) {
+  #experience .experience-header-sketches { width: 70px; height: 82px; right: 20px; top: 2px; }
+  #experience .experience-header-curve { width: 45px; height: 27px; top: 0; }
+  #experience .experience-header-spark { top: 43px; right: 0; width: 22px; height: 25px; }
+  #experience .experience-header-circle { width: 17px; height: 17px; left: 5px; top: 58px; }
+  #experience .experience-header-pencil, #experience .experience-header-wave { display: none; }
+  #experience .experience-description-line { display: inline; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  #experience .experience-header-sketches[data-moving="true"] .experience-header-wave { animation: experience-header-wave 7s ease-in-out 1.5s infinite; }
+}
+@media (max-width: 359px) {
+  #experience .experience-header-sketches { width: 50px; right: 16px; }
+  #experience .experience-header-curve { display: none; }
+}
+@keyframes experience-header-wave { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-2px) rotate(1deg); } }
+
+/* =========================================
+   EXPERIENCE CARDS
+   ========================================= */
+
+#experience .experience-card {
+  position: relative;
+  z-index: 2;
+
+  transition:
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    transform 300ms ease;
+}
+
+#experience .experience-company {
+  position: relative;
+  display: inline-block;
+}
+
+#experience .experience-card::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 26px;
+  height: 26px;
+  border-right: 2px solid var(--experience-accent);
+  border-bottom: 2px solid var(--experience-accent);
+  border-radius: 0 0 9px 0;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Give each company a subtle individual accent */
+
+#experience .experience-card[data-company="bigbigi"] {
+  --card-accent: var(--experience-purple);
+}
+
+#experience .experience-card[data-company="huntigox"] {
+  --card-accent: var(--experience-blue);
+}
+
+#experience .experience-card[data-company="skillsshift"] {
+  --card-accent: var(--experience-green);
+}
+
+#experience .experience-card[data-company]::after {
+  border-color: var(--card-accent);
+}
+
+/* =========================================
+   ANIMATED UNDERLINES AND SKETCHES
+   ========================================= */
+
+#experience .experience-sketch {
+  position: absolute;
+  color: var(--experience-accent);
+  pointer-events: none;
+}
+
+#experience .experience-sketch-underline {
+  left: 0;
+  bottom: -9px;
+  width: 100%;
+  height: 12px;
+}
+
+#experience .experience-sketch-arrow {
+  left: -28px;
+  top: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+#experience .experience-sketch-spark {
+  right: 14px;
+  top: 14px;
+  width: 22px;
+  height: 22px;
+}
+
+#experience [data-company="bigbigi"] .experience-sketch {
+  color: var(--experience-purple);
+}
+
+#experience [data-company="huntigox"] .experience-sketch {
+  color: var(--experience-blue);
+}
+
+#experience [data-company="skillsshift"] .experience-sketch {
+  color: var(--experience-green);
+}
+
+/* =========================================
+   TECHNOLOGY TAGS
+   ========================================= */
+
+#experience .experience-tech-tag {
+  transition:
+    border-color 250ms ease,
+    background-color 250ms ease,
+    transform 250ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #experience .experience-tech-tag:hover {
+    border-color: var(--card-accent, var(--experience-accent));
+    transform: translateY(-2px);
+  }
+}
+
+/* =========================================
+   TIMELINE PROGRESS
+   ========================================= */
+
+#experience .experience-milestone {
+  transition:
+    background-color 400ms ease,
+    border-color 400ms ease,
+    box-shadow 400ms ease;
+}
+
+#experience .experience-milestone[data-active="true"] {
+  background-color: var(--theme-accent);
+  border-color: color-mix(
+    in srgb,
+    var(--theme-accent) 65%,
+    transparent
+  );
+  box-shadow:
+    0 0 12px color-mix(
+      in srgb,
+      var(--theme-accent) 16%,
+      transparent
+    );
+}
+
+#experience .experience-date {
+  transition: color 400ms ease;
+}
+
+#experience [data-reached="true"] > .sticky .experience-date,
+#experience [data-reached="true"] > .relative > .experience-date {
+  color: var(--theme-foreground);
+}
+
+#experience .experience-progress-glow {
+  position: absolute;
+  left: 32px;
+  top: 0;
+  z-index: 11;
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  margin-top: -2px;
+  border-radius: 50%;
+  background: var(--experience-accent);
+  box-shadow:
+    0 0 5px color-mix(
+      in srgb,
+      var(--theme-accent) 15%,
+      transparent
+    );
+  pointer-events: none;
+}
+
+/* =========================================
+   IMAGES AND HOVER
+   ========================================= */
+
+#experience .experience-image {
+  transition: transform 500ms ease;
+}
+
+#experience .experience-image-frame {
+  transition:
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #experience .experience-card:hover {
+    border-color: var(--card-accent, var(--experience-accent));
+    box-shadow: 0 8px 30px rgba(41, 41, 41, 0.07);
+  }
+
+  #experience .experience-image-frame:hover .experience-image {
+    transform: translateY(-2px) scale(1.025);
+  }
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes experience-float {
+  0%, 100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+
+  50% {
+    transform: translateY(-14px) rotate(7deg);
+  }
+}
+
+@keyframes experience-cross-float {
+  0%, 100% {
+    transform: translateY(0) rotate(-12deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(12deg);
+  }
+}
+
+@keyframes experience-star-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 767px) {
+  #experience .experience-doodle {
+    opacity: 0.25;
+    width: 75px;
+  }
+
+  #experience .experience-floating-circle,
+  #experience .experience-floating-cross,
+  #experience .experience-sketch-star {
+    opacity: 0.2;
+  }
+
+  #experience .experience-sketch-arrow {
+    left: -16px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  #experience .experience-card,
+  #experience .experience-milestone,
+  #experience .experience-date,
+  #experience .experience-image,
+  #experience .experience-image-frame,
+  #experience .experience-tech-tag {
+    transition: none;
+  }
+
+  #experience .experience-floating-circle,
+  #experience .experience-floating-cross,
+  #experience .experience-sketch-star {
+    animation: none;
+  }
+
+  #experience .experience-image-frame:hover .experience-image {
+    transform: none;
+  }
+
+  #experience .experience-progress-glow {
+    display: none;
+  }
+}

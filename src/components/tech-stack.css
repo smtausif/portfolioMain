@@ -1,0 +1,713 @@
+
+/* =========================================
+   TECH STACK SECTION
+========================================= */
+
+#tech-stack.tech-stack-section {
+  --tech-accent: #c44a13;
+  --tech-accent-soft: #f5d4bc;
+  --tech-ink: #292929;
+
+  position: relative;
+  isolation: isolate;
+  padding-block: 48px 45px;
+  background: #faf9f6;
+  color: var(--tech-ink);
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+#tech-stack .tech-stack-container {
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1500px;
+  margin-inline: auto;
+  padding-inline: 40px;
+}
+
+/* =========================================
+   CENTERED SECTION HEADER
+========================================= */
+
+#tech-stack .tech-stack-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto 10px;
+  max-width: 900px;
+}
+
+#tech-stack .tech-stack-title {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+  color: var(--tech-ink);
+}
+
+#tech-stack .tech-stack-subtitle {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  margin: 14px auto 0;
+  font-size: clamp(20px, 2vw, 25px);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.035em;
+  color: var(--tech-ink);
+}
+
+/* Hand-drawn orange underline */
+
+#tech-stack .tech-stack-subtitle::after {
+  content: "";
+  position: absolute;
+  left: 2%;
+  bottom: -9px;
+  width: 96%;
+  height: 3px;
+  background: var(--tech-accent);
+  border-radius: 60% 35% 55% 30%;
+  transform: rotate(-1deg) scaleX(0);
+  transform-origin: left center;
+  animation: tech-header-underline 900ms ease-out 400ms forwards;
+}
+
+#tech-stack .tech-stack-description {
+  max-width: 680px;
+  margin: 22px auto 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #69645f;
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* =========================================
+   TWO-COLUMN LAYOUT
+========================================= */
+
+#tech-stack .tech-stack-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+  min-height: 0;
+}
+
+#tech-stack .tech-stack-sphere-column,
+#tech-stack .tech-stack-terminal-column {
+  position: relative;
+  min-width: 0;
+  width: 100%;
+}
+
+/* =========================================
+   LEFT: TECHNOLOGY SPHERE
+========================================= */
+
+#tech-stack .tech-stack-sphere-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+}
+
+#tech-stack .tech-sphere-column {
+  width: 100%;
+  max-width: 590px;
+  margin-inline: auto;
+}
+
+#tech-stack .tech-sphere {
+  width: min(100%, 500px);
+  margin-inline: auto;
+}
+
+#tech-stack .tech-sphere-hint {
+  margin-top: 12px;
+  color: #77716c;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* =========================================
+   RIGHT: LEARNING ILLUSTRATION
+========================================= */
+
+#tech-stack .tech-stack-terminal-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tech-stack .tech-learning-panel {
+  width: 100%;
+  max-width: 620px;
+  min-height: 0;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+  padding: 0;
+
+  color: var(--tech-ink);
+}
+
+/* =========================================
+   HAND-DRAWN DEVELOPER
+========================================= */
+
+#tech-stack .tech-developer-sketch {
+  display: block;
+  flex: 0 0 auto;
+
+  width: min(100%, 510px);
+  height: auto;
+  max-height: 305px;
+  min-height: 0;
+
+  overflow: visible;
+  color: var(--tech-ink);
+
+  filter: drop-shadow(
+    0 5px 8px rgba(50, 40, 30, 0.025)
+  );
+}
+
+#tech-stack .tech-developer-book-labels {
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.2px;
+}
+
+/* =========================================
+   LEARNING STATEMENT
+========================================= */
+
+#tech-stack .tech-learning-statement {
+  max-width: 580px;
+  margin: 0;
+
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+
+  text-align: center;
+  text-wrap: balance;
+  color: var(--tech-ink);
+}
+
+#tech-stack .tech-learning-emphasis,
+#tech-stack .tech-learning-word {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+#tech-stack .tech-learning-emphasis {
+  color: var(--tech-accent);
+}
+
+#tech-stack .tech-learning-word {
+  color: var(--tech-ink);
+}
+
+/* =========================================
+   HAND-DRAWN ORANGE UNDERLINES
+========================================= */
+
+#tech-stack .tech-learning-underline {
+  position: absolute;
+  left: -1%;
+  bottom: -11px;
+
+  width: 102%;
+  height: 18px;
+
+  color: var(--tech-accent);
+  pointer-events: none;
+}
+
+#tech-stack .tech-learning-marker {
+  position: absolute;
+  z-index: -1;
+
+  left: -4%;
+  bottom: 1px;
+
+  width: 108%;
+  height: 17px;
+
+  color: var(--tech-accent);
+  opacity: 0.22;
+
+  transform: rotate(-3deg);
+  pointer-events: none;
+}
+
+/* =========================================
+   SECONDARY CAPTION
+========================================= */
+
+#tech-stack .tech-learning-caption {
+  max-width: 520px;
+  margin: 8px 0 0;
+
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.7;
+  font-weight: 400;
+
+  color: #69645f;
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* =========================================
+   SECTION FOOTER
+========================================= */
+
+#tech-stack .tech-stack-footer {
+  margin-top: 10px;
+  color: #77716c;
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-align: center;
+  rotate: -2deg;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes tech-header-underline {
+  from {
+    transform: rotate(-1deg) scaleX(0);
+  }
+
+  to {
+    transform: rotate(-1deg) scaleX(1);
+  }
+}
+
+@keyframes tech-coffee-steam {
+  0%, 100% {
+    opacity: 0.2;
+    transform: translateY(2px);
+  }
+
+  45% {
+    opacity: 0.7;
+  }
+
+  85% {
+    opacity: 0;
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes tech-developer-blink {
+  0%, 94%, 98%, 100% {
+    transform: scaleY(1);
+  }
+
+  96% {
+    transform: scaleY(0.08);
+  }
+}
+
+@keyframes tech-bulb-thought {
+  0%, 70%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  80% {
+    transform: rotate(-3deg) scale(1.035);
+  }
+
+  90% {
+    transform: rotate(2deg) scale(1.035);
+  }
+}
+
+@keyframes tech-bulb-rays {
+  0%, 65%, 100% {
+    opacity: 0.45;
+  }
+
+  80% {
+    opacity: 1;
+  }
+}
+
+/* Animate only when illustration is active */
+
+@media (prefers-reduced-motion: no-preference) {
+  #tech-stack
+  .tech-developer-sketch[data-moving="true"]
+  .tech-developer-steam {
+    animation: tech-coffee-steam 3s ease-in-out 1.8s infinite;
+  }
+
+  #tech-stack
+  .tech-developer-sketch[data-moving="true"]
+  .tech-developer-steam-1 {
+    animation-delay: 2.25s;
+  }
+
+  #tech-stack
+  .tech-developer-sketch[data-moving="true"]
+  .tech-developer-steam-2 {
+    animation-delay: 2.7s;
+  }
+
+  #tech-stack
+  .tech-developer-sketch[data-moving="true"]
+  .tech-developer-eyes {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: tech-developer-blink 6.3s linear 1.8s infinite;
+  }
+
+  #tech-stack
+  .tech-developer-sketch[data-moving="true"]
+  .tech-developer-bulb {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: tech-bulb-thought 4s ease-in-out 1.8s infinite;
+  }
+
+  #tech-stack
+  .tech-developer-sketch[data-moving="true"]
+  .tech-developer-rays {
+    animation: tech-bulb-rays 4s ease-in-out 1.8s infinite;
+  }
+}
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 1024px) {
+  #tech-stack .tech-stack-content {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    gap: 12px;
+  }
+
+  #tech-stack .tech-stack-sphere-column {
+    transform: translateX(18px);
+  }
+
+  #tech-stack .tech-stack-terminal-column {
+    transform: translateX(-18px);
+  }
+}
+
+@media (min-width: 1280px) {
+  #tech-stack .tech-stack-content {
+    gap: 0;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1023px) {
+  #tech-stack.tech-stack-section {
+    padding-block: 55px;
+  }
+
+  #tech-stack .tech-stack-container {
+    padding-inline: 32px;
+  }
+
+  #tech-stack .tech-stack-content {
+    gap: 18px;
+  }
+
+  #tech-stack .tech-stack-sphere-column {
+    min-height: 0;
+  }
+
+  #tech-stack .tech-learning-panel {
+    min-height: 0;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+  #tech-stack.tech-stack-section {
+    padding-block: 45px;
+  }
+
+  #tech-stack .tech-stack-container {
+    padding-inline: 20px;
+  }
+
+  #tech-stack .tech-stack-header {
+    margin-bottom: 18px;
+  }
+
+  #tech-stack .tech-stack-title {
+    font-size: clamp(34px, 9vw, 46px);
+  }
+
+  #tech-stack .tech-stack-subtitle {
+    font-size: 20px;
+  }
+
+  #tech-stack .tech-stack-description {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  #tech-stack .tech-stack-content {
+    gap: 24px;
+    min-height: 0;
+  }
+
+  #tech-stack .tech-stack-sphere-column {
+    min-height: 0;
+  }
+
+  #tech-stack .tech-sphere {
+    width: min(100%, 390px);
+  }
+
+  #tech-stack .tech-learning-panel {
+    min-height: 0;
+    gap: 14px;
+  }
+
+  #tech-stack .tech-developer-sketch {
+    display: block;
+    width: min(100%, 440px);
+    height: auto;
+    max-height: 260px;
+    flex: 0 0 auto;
+    overflow: visible;
+    color: var(--tech-ink);
+  }
+
+  #tech-stack .tech-learning-statement {
+    font-size: clamp(22px, 5.2vw, 28px);
+  }
+
+  #tech-stack .tech-learning-caption {
+    font-size: 15px;
+  }
+
+  #tech-stack .tech-stack-footer {
+    margin-top: 32px;
+    font-size: 20px;
+    color: #55514d;
+  }
+}
+
+@media (max-width: 399px) {
+  #tech-stack .tech-stack-container {
+    padding-inline: 16px;
+  }
+
+  #tech-stack .tech-sphere {
+    width: min(100%, 330px);
+  }
+
+  #tech-stack .tech-learning-panel {
+    gap: 12px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  #tech-stack .tech-stack-subtitle::after {
+    animation: none;
+    transform: rotate(-1deg) scaleX(1);
+  }
+
+  #tech-stack .tech-developer-steam,
+  #tech-stack .tech-developer-eyes,
+  #tech-stack .tech-developer-bulb,
+  #tech-stack .tech-developer-rays {
+    animation: none !important;
+  }
+}
+
+
+
+/* Soft transitions between sections */
+
+#tech-stack.tech-stack-section {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Fade only the background at the top and bottom */
+#tech-stack.tech-stack-section > div[aria-hidden="true"] {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.4) 7%,
+    black 17%,
+    black 83%,
+    rgba(0, 0, 0, 0.4) 93%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.4) 7%,
+    black 17%,
+    black 83%,
+    rgba(0, 0, 0, 0.4) 93%,
+    transparent 100%
+  );
+}
+
+
+/* =========================================
+   ANIMATED HAND-DRAWN WIND
+========================================= */
+
+#tech-stack .tech-wind-line {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tech-wind-flow 4s ease-in-out infinite alternate;
+}
+
+#tech-stack .tech-wind-2 {
+  animation-delay: -1s;
+}
+
+#tech-stack .tech-wind-3 {
+  animation-delay: -2s;
+}
+
+#tech-stack .tech-wind-4 {
+  animation-delay: -0.7s;
+}
+
+#tech-stack .tech-wind-5 {
+  animation-delay: -1.5s;
+}
+
+@keyframes tech-wind-flow {
+  0% {
+    transform: translate(-5px, 2px) rotate(-3deg);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translate(4px, -3px) rotate(2deg);
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: translate(10px, 2px) rotate(4deg);
+    opacity: 0.35;
+  }
+}
+
+/* =========================================
+   TECH SPHERE BACKGROUND DOODLES
+========================================= */
+
+#tech-stack .tech-stack-content {
+  position: relative;
+}
+
+#tech-stack .tech-sphere-doodles {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 48%;
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#tech-stack .tech-sphere-doodles svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+#tech-stack .tech-doodle {
+  stroke: #c8c8c8;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.55;
+  animation: tech-doodle-float 6s ease-in-out infinite;
+}
+
+#tech-stack .tech-doodle-2 {
+  animation-delay: -2s;
+}
+
+#tech-stack .tech-doodle-3 {
+  animation-delay: -4s;
+}
+
+#tech-stack .tech-stack-sphere-column,
+#tech-stack .tech-stack-terminal-column {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes tech-doodle-float {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: translateY(-12px);
+    opacity: 0.65;
+  }
+}
+
+@media (max-width: 1023px) {
+  #tech-stack .tech-sphere-doodles {
+    width: 100%;
+    top: 30%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #tech-stack .tech-wind-line,
+  #tech-stack .tech-doodle {
+    animation: none;
+  }
+}
+
