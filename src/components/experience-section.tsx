@@ -297,13 +297,6 @@ export function ExperienceSection() {
         <motion.h2
           id="experience-heading"
           className="experience-editorial-title"
-          style={{
-            fontSize: "clamp(36px, 4.5vw, 68px)",
-            lineHeight: 1.06,
-            letterSpacing: "-0.055em",
-            fontWeight: 800,
-            maxWidth: "100%",
-          }}
           variants={{
             hidden: { opacity: 0, y: 16 },
             visible: {
@@ -326,10 +319,6 @@ export function ExperienceSection() {
 
         <motion.p
           className="experience-subtitle"
-          style={{
-            fontSize: "clamp(20px, 2vw, 26px)",
-            marginTop: "24px",
-          }}
           variants={{
             hidden: { opacity: 0, y: 10 },
             visible: {
@@ -349,16 +338,6 @@ export function ExperienceSection() {
 
         <motion.div
           className="experience-header-description"
-          style={{
-            width: "min(100%, 780px)",
-            maxWidth: "100%",
-            margin: "36px 0 0 auto",
-            fontSize: "clamp(17px, 1.65vw, 22px)",
-            lineHeight: 1.6,
-            letterSpacing: "-0.025em",
-            textAlign: "left",
-            color: "var(--theme-secondary)",
-          }}
           variants={{
             hidden: { opacity: 0, y: 12 },
             visible: {
@@ -373,34 +352,18 @@ export function ExperienceSection() {
           }}
         >
           A look at my{" "}
-          <strong
-            style={{
-              color: "var(--theme-foreground)",
-              fontWeight: 600,
-            }}
-          >
+          <strong>
             professional experience
           </strong>
           , the products{" "}
           <span
             className="experience-description-emphasis"
-            style={{
-              position: "relative",
-              display: "inline-block",
-              color: "var(--theme-foreground)",
-              fontWeight: 650,
-            }}
           >
             I&apos;ve helped build
             <ExperienceHeaderUnderline delay={0.85} />
           </span>
           , and the{" "}
-          <strong
-            style={{
-              color: "var(--theme-foreground)",
-              fontWeight: 650,
-            }}
-          >
+          <strong>
             technologies
           </strong>{" "}
           I&apos;ve worked with along the way.

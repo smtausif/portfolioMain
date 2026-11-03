@@ -1,0 +1,660 @@
+
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
+
+.contact-section {
+  --contact-bg: #faf9f6;
+  --contact-ink: #303030;
+  --contact-green: #8bea32;
+  --contact-blue: #2698f5;
+  --contact-purple: #7137f5;
+  --contact-orange: #f45b13;
+
+  position: relative;
+  width: 100%;
+  overflow: clip;
+  background: var(--contact-bg);
+  color: var(--contact-ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-section,
+.contact-section * {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   PART 1: PHILOSOPHY
+   ========================================= */
+
+.contact-philosophy {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(150px, 0.8fr) minmax(0, 2.6fr) minmax(150px, 0.8fr);
+  align-items: center;
+  gap: 28px 32px;
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding: 70px clamp(24px, 4vw, 64px) 100px;
+  isolation: isolate;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+}
+
+.contact-build-window,
+.contact-checklist,
+.contact-browser-sketch {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.contact-philosophy-content {
+  position: relative;
+  z-index: 3;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  min-width: 0;
+  width: min(100%, 820px);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.contact-eyebrow {
+  display: inline-block;
+  margin-bottom: 28px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #858585;
+}
+
+.contact-philosophy h2 {
+  margin: 0;
+  font-size: clamp(38px, 5vw, 76px);
+  line-height: 1.06;
+  font-weight: 850;
+  letter-spacing: -0.065em;
+}
+
+.contact-headline-highlight {
+  position: relative;
+  display: inline;
+  padding: 0 0.12em;
+  background: linear-gradient(
+    transparent 15%,
+    var(--contact-green) 15%,
+    var(--contact-green) 88%,
+    transparent 88%
+  );
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.contact-philosophy-content > p {
+  max-width: 640px;
+  margin: 42px auto 0;
+  color: #6e6e6e;
+  font-size: clamp(18px, 1.8vw, 25px);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.035em;
+}
+
+.contact-highlight {
+  padding: 0 0.07em;
+  background: var(--contact-green);
+  color: #242424;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* =========================================
+   FLOATING BUILD WINDOW
+   ========================================= */
+
+.contact-build-window {
+  position: relative;
+  z-index: 2;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  min-width: 0;
+  width: min(100%, 230px);
+  padding: 18px 20px 24px;
+  border: 2.5px solid var(--contact-ink);
+  border-radius: 17px;
+  background: #fffefa;
+  box-shadow: 6px 7px 0 rgb(48 48 48 / 7%);
+}
+
+.contact-window-dots,
+.contact-browser-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.contact-window-dots i,
+.contact-browser-dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #f64545;
+}
+
+.contact-window-dots i:nth-child(2),
+.contact-browser-dots span:nth-child(2) {
+  background: #ffbd36;
+}
+
+.contact-window-dots i:nth-child(3),
+.contact-browser-dots span:nth-child(3) {
+  background: #4ccc49;
+}
+
+.contact-terminal-command {
+  margin-top: 24px;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.contact-terminal-success {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.contact-terminal-success > svg {
+  flex-shrink: 0;
+  padding: 3px;
+  border-radius: 5px;
+  background: #42d338;
+  color: white;
+}
+
+.contact-terminal-success small {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #777;
+}
+
+.contact-floating-tag {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 17px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.contact-tag-purple {
+  right: -8px;
+  bottom: -19px;
+  background: var(--contact-purple);
+}
+
+.contact-tag-purple::before,
+.contact-tag-orange::before {
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 20px solid currentColor;
+  content: "";
+  transform: rotate(-30deg);
+}
+
+.contact-tag-purple::before {
+  color: var(--contact-purple);
+}
+
+/* =========================================
+   CHECKLIST
+   ========================================= */
+
+.contact-checklist {
+  position: relative;
+  z-index: 2;
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: center;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  width: min(100%, 155px);
+  padding: 22px 21px;
+  border: 2.5px solid var(--contact-ink);
+  border-radius: 18px;
+  background: #fffefa;
+  box-shadow: 5px 6px 0 rgb(48 48 48 / 7%);
+}
+
+.contact-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.contact-checklist-item > span {
+  display: flex;
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #999;
+  border-radius: 5px;
+}
+
+.contact-checklist-item > span.checked {
+  border-color: var(--contact-purple);
+  background: var(--contact-purple);
+  color: white;
+}
+
+/* =========================================
+   BROWSER SKETCH
+   ========================================= */
+
+.contact-browser-sketch {
+  position: relative;
+  z-index: 2;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  justify-self: center;
+  min-width: 0;
+  width: min(100%, 230px);
+  padding: 15px 18px 19px;
+  border: 2.5px solid var(--contact-ink);
+  border-radius: 17px;
+  background: #fffefa;
+  box-shadow: 5px 6px 0 rgb(48 48 48 / 7%);
+}
+
+.contact-browser-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.contact-browser-body > svg {
+  flex: 0 1 58%;
+  min-width: 0;
+  width: 58%;
+  height: auto;
+}
+
+.contact-browser-lines {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.contact-browser-lines span {
+  height: 4px;
+  border-radius: 5px;
+  background: var(--contact-ink);
+}
+
+.contact-browser-lines span:nth-child(2) {
+  width: 85%;
+}
+
+.contact-browser-lines span:nth-child(3) {
+  width: 65%;
+}
+
+.contact-tag-orange {
+  right: -8px;
+  bottom: -17px;
+  background: var(--contact-orange);
+}
+
+.contact-tag-orange::before {
+  color: var(--contact-orange);
+}
+
+/* =========================================
+   DECORATIVE ARROW AND DIVIDER
+   ========================================= */
+
+.contact-philosophy-arrow {
+  position: absolute;
+  z-index: 1;
+  right: 26%;
+  bottom: 12px;
+  width: 70px;
+  height: auto;
+  color: var(--contact-ink);
+  transform: rotate(150deg);
+}
+
+.contact-handdrawn-divider {
+  width: 88%;
+  height: 1px;
+  margin: 0 auto;
+  background: #d2d0cb;
+  transform: rotate(-0.3deg);
+}
+
+/* =========================================
+   PART 2: CONNECT
+   ========================================= */
+
+.contact-connect {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.1fr) minmax(0, 1fr);
+  grid-template-rows: 100px auto;
+  align-items: center;
+  gap: 0 clamp(16px, 2vw, 28px);
+  width: min(calc(100% - 48px), 1080px);
+  margin: 0 auto;
+  padding: 32px 0 0;
+}
+
+.contact-connect > * {
+  min-width: 0;
+}
+
+.contact-approach {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 310px;
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: end;
+}
+
+.contact-handwriting {
+  display: block;
+  width: fit-content;
+  margin-bottom: 14px;
+  color: #999;
+  font-family: "Comic Sans MS", "Segoe Print", cursive;
+  font-size: 23px;
+  font-style: italic;
+  font-weight: 700;
+  transform: rotate(-4deg);
+  transform-origin: left center;
+}
+
+.contact-approach p {
+  margin: 0;
+  font-size: clamp(17px, 1.45vw, 21px);
+  font-weight: 650;
+  line-height: 1.55;
+  letter-spacing: -0.045em;
+}
+
+.contact-character-area {
+  position: relative;
+  z-index: 1;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: end;
+  width: 100%;
+  max-width: 350px;
+  margin-inline: auto;
+  padding-top: 100px;
+}
+
+.contact-character {
+  /* Crop the source's blank margins: (248, 176) to (1096, 1108).
+     The image keeps its intrinsic ratio; only its wrapper clips it. */
+  position: relative;
+  width: 100%;
+  aspect-ratio: 848 / 932;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.contact-character-image {
+  position: absolute;
+  top: -18.8841%;
+  left: -29.2453%;
+  display: block;
+  width: 154.717%;
+  max-width: none;
+  height: auto;
+}
+
+.contact-chat-bubble {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 22px;
+  background: var(--contact-blue);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  white-space: normal;
+  box-shadow: 0 4px 12px rgb(38 152 245 / 8%);
+}
+
+.contact-chat-bubble::after {
+  position: absolute;
+  bottom: -10px;
+  left: 24px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid var(--contact-blue);
+  border-right: 12px solid transparent;
+  content: "";
+  transform: rotate(12deg);
+}
+
+/* =========================================
+   CONTACT BUTTONS
+   ========================================= */
+
+.contact-links-area {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+  max-width: 320px;
+  grid-column: 3;
+  grid-row: 2;
+  margin-inline: auto;
+  gap: 10px;
+  padding: 0;
+}
+
+.contact-down-arrows {
+  margin-bottom: 0;
+  color: #c7c7c7;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 32px;
+  letter-spacing: 8px;
+  white-space: nowrap;
+}
+
+.contact-sketch-button {
+  display: flex;
+  width: 100%;
+  max-width: 340px;
+  min-width: 0;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 3px solid var(--contact-ink);
+  border-radius: 48% 52% 47% 53% / 55% 48% 52% 45%;
+  background: var(--contact-bg);
+  color: var(--contact-ink);
+  cursor: pointer;
+  font-family: "Comic Sans MS", "Segoe Print", cursive;
+  font-size: clamp(14px, 1.22vw, 18px);
+  line-height: 1.45;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-sketch-button:nth-of-type(even) {
+  border-radius: 53% 47% 52% 48% / 47% 53% 45% 55%;
+  transform: rotate(-2deg);
+}
+
+.contact-sketch-button:hover:not(:disabled) {
+  background: #fff;
+  box-shadow: 5px 5px 0 var(--contact-green);
+  transform: translateY(-5px) rotate(1deg);
+}
+
+.contact-sketch-button:focus-visible {
+  outline: 3px solid var(--contact-blue);
+  outline-offset: 5px;
+}
+
+.contact-sketch-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.contact-sketch-button svg {
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+}
+
+.contact-sketch-button .contact-copy-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.55;
+}
+
+.contact-sketch-button span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-email-group {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  width: 100%;
+  min-width: 0;
+}
+
+.contact-tap-hint {
+  color: #555;
+  font-family: "Comic Sans MS", "Segoe Print", cursive;
+  font-size: 17px;
+  font-weight: 700;
+  transform: rotate(-3deg);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.contact-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 6%;
+  border-top: 1px solid #e4e1db;
+  color: #777;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 1100px) {
+  .contact-philosophy { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; padding: 70px 4% 100px; }
+  .contact-philosophy-content { grid-column: 1 / -1; grid-row: 1; margin-bottom: 16px; }
+  .contact-build-window { grid-column: 1; grid-row: 2; }
+  .contact-checklist { grid-column: 2; grid-row: 2; }
+  .contact-browser-sketch { grid-column: 3; grid-row: 2; }
+  .contact-tag-purple, .contact-tag-orange { right: -5px; bottom: -14px; }
+  .contact-philosophy-arrow { display: none; }
+}
+
+@media (max-width: 900px) {
+  .contact-connect {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto;
+    width: min(calc(100% - 48px), 680px);
+    gap: 24px;
+  }
+
+  .contact-approach { grid-row: 1; justify-self: center; }
+  .contact-links-area { grid-column: 1; grid-row: 2; }
+  .contact-character-area { grid-column: 2; grid-row: 1 / span 2; max-width: 320px; }
+}
+
+@media (max-width: 700px) {
+  .contact-philosophy { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 45px 20px 65px; }
+  .contact-philosophy-content { margin-bottom: 4px; }
+  .contact-eyebrow { margin-bottom: 20px; }
+  .contact-philosophy h2 { font-size: clamp(32px, 8vw, 52px); letter-spacing: -0.055em; }
+  .contact-philosophy-content > p { margin-top: 28px; font-size: 18px; }
+  .contact-build-window { grid-column: 1 / -1; grid-row: 2; width: min(100%, 245px); }
+  .contact-checklist { grid-column: 1; grid-row: 3; padding: 18px 14px; }
+  .contact-browser-sketch { grid-column: 2; grid-row: 3; padding: 12px; }
+  .contact-browser-body { gap: 6px; }
+  .contact-browser-lines { gap: 8px; padding-top: 8px; }
+  .contact-floating-tag { padding: 8px 12px; font-size: 12px; }
+  .contact-approach p { font-size: 18px; }
+  .contact-sketch-button { font-size: 16px; }
+  .contact-footer { flex-direction: column; gap: 10px; padding: 18px 20px; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .contact-connect {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    width: calc(100% - 40px);
+    gap: 24px;
+    padding-top: 28px;
+  }
+
+  .contact-approach { max-width: 340px; }
+  .contact-links-area { grid-column: 1; grid-row: 2; }
+  .contact-character-area { grid-column: 1; grid-row: 3; max-width: 300px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-sketch-button { transition: none; }
+}

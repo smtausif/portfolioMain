@@ -66,7 +66,7 @@ export function WebcamPixelGridDemo() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 12h16m-6-6 6 6-6 6" />
                 </svg>
               </a>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+              <a href="/projects/SM_Tausif_Resume.pdf" target="_blank" rel="noopener noreferrer"
                 aria-label="View Resume (PDF, opens in a new tab)"
                 className="hero-editorial-button pointer-events-auto inline-flex h-13 w-full max-w-64 items-center justify-center gap-3 rounded-full border border-border bg-card px-8 text-sm font-semibold text-foreground shadow-soft transition-[background-color,border-color,color,box-shadow,translate] duration-300 hover:border-accent/50 hover:bg-surface hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent motion-safe:hover:-translate-y-0.5 sm:w-auto">
                 View Resume
